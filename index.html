@@ -3,511 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ground Wind Holding | Investment Holding in Wellness, Fitness and Human Development</title>
-  <meta name="description" content="Ground Wind Holding es una sociedad holding de inversión con base en Palma de Mallorca, creada para identificar, financiar y acompañar estratégicamente a compañías del ámbito del fitness, el bienestar, la salud y el desarrollo humano." />
-  <meta property="og:title" content="Ground Wind Holding" />
-  <meta property="og:description" content="Sociedad holding de inversión en wellness, fitness y desarrollo humano. Palma de Mallorca." />
+  <title>Ground Wind | Sociedad de inversión en wellness, fitness y desarrollo humano</title>
+  <meta name="description" content="Ground Wind es una sociedad de inversión con base en Palma de Mallorca, creada para identificar, financiar y acompañar estratégicamente a empresas del ámbito del fitness, el bienestar, la salud y el desarrollo humano." />
+  <meta property="og:title" content="Ground Wind" />
+  <meta property="og:description" content="Sociedad de inversión en wellness, fitness, salud y desarrollo humano. Palma de Mallorca." />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <link rel="canonical" href="/" />
+  <link rel="alternate" hreflang="es" href="/" />
+  <link rel="alternate" hreflang="en" href="/en/" />
+  <link rel="alternate" hreflang="x-default" href="/" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
-  <style>
-    :root{
-      --paper:#FAFAF4;
-      --ink:#171D15;
-      --bosc:#1D4A33;
-      --lima:#D7F056;
-      --sage:#E4EBD8;
-      --stone:#EFEDE3;
-      --line:#DDDACC;
-      --f-display:'Bricolage Grotesque', system-ui, sans-serif;
-      --f-body:'Instrument Sans', system-ui, sans-serif;
-      --r:28px;
-      --pad-x:clamp(20px, 4.5vw, 72px);
-      --max-w:1360px;
-    }
-    *{ box-sizing:border-box; margin:0; padding:0; }
-    html{ scroll-behavior:smooth; }
-    section[id], header[id]{ scroll-margin-top:96px; }
-    body{
-      font-family:var(--f-body);
-      background:var(--paper);
-      color:var(--ink);
-      overflow-x:hidden;
-      -webkit-font-smoothing:antialiased;
-    }
-    img{ display:block; max-width:100%; }
-    a{ color:inherit; }
-    ::selection{ background:var(--lima); color:var(--ink); }
-    .container{ max-width:var(--max-w); margin-inline:auto; padding-inline:var(--pad-x); }
-
-    /* ---------- tipografía ---------- */
-    h1,h2,h3{ font-family:var(--f-display); font-weight:600; letter-spacing:-.03em; }
-    .kicker{
-      display:inline-flex; align-items:center; gap:8px;
-      font:600 12px/1 var(--f-body); letter-spacing:.06em; text-transform:uppercase;
-      color:var(--bosc);
-      background:var(--sage);
-      border-radius:999px;
-      padding:9px 16px;
-      margin-bottom:26px;
-    }
-    .kicker::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--lima); outline:1.5px solid var(--bosc); outline-offset:1px; }
-    .lede{
-      font-size:clamp(16px,1.3vw,19px); line-height:1.65;
-      color:color-mix(in srgb, var(--ink) 72%, var(--line));
-      max-width:58ch;
-    }
-    .lede strong{ font-weight:600; color:var(--ink); }
-    .hl{
-      background:var(--lima);
-      border-radius:.35em;
-      padding:.04em .14em;
-      -webkit-box-decoration-break:clone; box-decoration-break:clone;
-    }
-
-    /* ---------- botones ---------- */
-    .btn{
-      display:inline-flex; align-items:center; gap:10px;
-      font:600 14.5px/1 var(--f-body);
-      text-decoration:none;
-      border-radius:999px;
-      padding:16px 26px;
-      transition:transform .25s cubic-bezier(.22,1,.36,1), background-color .25s ease, color .25s ease, border-color .25s ease;
-      cursor:pointer;
-    }
-    .btn .arr{ transition:transform .25s ease; }
-    .btn:hover .arr{ transform:translateX(3px); }
-    .btn-primary{ background:var(--ink); color:var(--paper); border:1.5px solid var(--ink); }
-    .btn-primary:hover{ background:var(--bosc); border-color:var(--bosc); transform:translateY(-2px); }
-    .btn-lima{ background:var(--lima); color:var(--ink); border:1.5px solid var(--lima); }
-    .btn-lima:hover{ transform:translateY(-2px); }
-    .btn-ghost{ background:transparent; color:var(--ink); border:1.5px solid var(--line); }
-    .btn-ghost:hover{ border-color:var(--ink); transform:translateY(-2px); }
-    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
-      outline:2.5px solid var(--bosc); outline-offset:3px;
-    }
-
-    /* ---------- motion ---------- */
-    .reveal{ opacity:0; transform:translateY(28px); transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
-    .reveal.in{ opacity:1; transform:none; }
-    .reveal[data-d="1"]{ transition-delay:.09s; }
-    .reveal[data-d="2"]{ transition-delay:.18s; }
-    .reveal[data-d="3"]{ transition-delay:.27s; }
-    @media (prefers-reduced-motion:reduce){
-      html{ scroll-behavior:auto; }
-      *,*::before,*::after{ transition:none !important; animation:none !important; }
-      .reveal{ opacity:1 !important; transform:none !important; }
-    }
-
-    /* ---------- nav ---------- */
-    nav{
-      position:fixed; top:0; left:0; right:0; z-index:1000;
-      background:color-mix(in srgb, var(--paper) 86%, transparent);
-      backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
-      border-bottom:1px solid color-mix(in srgb, var(--line) 70%, transparent);
-    }
-    .nav-inner{
-      max-width:var(--max-w); margin-inline:auto; padding-inline:var(--pad-x);
-      height:80px; display:flex; align-items:center; justify-content:space-between; gap:24px;
-    }
-    .brand img{ height:46px; width:auto; }
-    .nav-links{ list-style:none; display:flex; align-items:center; gap:clamp(18px,2.2vw,34px); }
-    .nav-links a:not(.btn){
-      text-decoration:none; font:500 14px/1 var(--f-body);
-      color:color-mix(in srgb, var(--ink) 70%, var(--line));
-      transition:color .2s ease;
-    }
-    .nav-links a:not(.btn):hover, .nav-links a:not(.btn).active{ color:var(--bosc); font-weight:600; }
-    .nav-links .btn{ padding:12px 20px; font-size:13.5px; }
-    @media (max-width:960px){ .nav-links li:not(.nav-cta-li){ display:none; } }
-
-    /* ---------- hero ---------- */
-    #hero{ position:relative; padding-top:clamp(150px,16vh,200px); padding-bottom:clamp(40px,4vw,60px); overflow:hidden; }
-    .wind{
-      position:absolute; z-index:0; pointer-events:none;
-      top:110px; right:-120px; width:min(56vw,860px); height:auto;
-      aspect-ratio:800/420;
-      color:var(--bosc); opacity:.3;
-    }
-    .wind{ animation:drift 10s ease-in-out infinite; }
-    .wind path{
-      fill:none; stroke:currentColor; stroke-width:2.5; stroke-linecap:round;
-    }
-    .wind path:nth-child(2){ stroke:var(--lima); opacity:.9; }
-    @keyframes drift{ 0%,100%{ transform:translateX(0); } 50%{ transform:translateX(-28px); } }
-    .hero-inner{ position:relative; z-index:1; }
-    .hero-title{
-      font-size:clamp(44px,7vw,104px);
-      line-height:1.0;
-      letter-spacing:-.04em;
-      max-width:15ch;
-      margin-bottom:32px;
-    }
-    .hero-sub{ margin-bottom:40px; }
-    .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:clamp(56px,7vw,88px); }
-    .hero-stats{
-      display:grid; grid-template-columns:repeat(3,1fr);
-      gap:16px;
-    }
-    .stat{
-      background:var(--stone);
-      border-radius:var(--r);
-      padding:clamp(24px,2.6vw,36px);
-      display:flex; flex-direction:column; gap:10px;
-      transition:transform .3s cubic-bezier(.22,1,.36,1), background-color .3s ease;
-    }
-    .stat:hover{ transform:translateY(-4px); background:var(--sage); }
-    .stat strong{
-      font:600 clamp(40px,4.4vw,68px)/0.95 var(--f-display);
-      letter-spacing:-.04em; color:var(--ink);
-    }
-    .stat strong i{ font-style:normal; color:var(--bosc); }
-    .stat span{
-      font:500 13.5px/1.5 var(--f-body);
-      color:color-mix(in srgb, var(--ink) 62%, var(--line));
-      max-width:24ch;
-    }
-
-    /* ---------- secciones ---------- */
-    section{ padding-block:clamp(84px,10vw,140px); }
-    .sec-title{
-      font-size:clamp(32px,4.4vw,64px);
-      line-height:1.02;
-      max-width:20ch;
-      margin-bottom:24px;
-    }
-    .sec-sub{ margin-bottom:clamp(40px,5vw,64px); }
-
-    /* ---------- estructura ---------- */
-    #estructura{ padding-top:0; }
-    .estructura-card{
-      background:var(--bosc);
-      color:var(--paper);
-      border-radius:calc(var(--r) + 8px);
-      padding:clamp(36px,5vw,80px);
-      display:grid; grid-template-columns:minmax(0,6fr) minmax(0,5fr);
-      gap:clamp(32px,5vw,80px);
-      align-items:center;
-      position:relative; overflow:hidden;
-    }
-    .estructura-card .wind2{
-      position:absolute; right:-60px; bottom:-40px; width:420px;
-      aspect-ratio:420/240;
-      color:var(--lima); opacity:.22; pointer-events:none;
-    }
-    .estructura-card .wind2 path{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; }
-    .estructura-card h2{
-      font-size:clamp(28px,3.4vw,48px); line-height:1.05;
-      margin-bottom:26px;
-    }
-    .estructura-card h2 .hl{ background:var(--lima); color:var(--ink); }
-    .estructura-card p{
-      font-size:clamp(15.5px,1.2vw,18px); line-height:1.68;
-      color:color-mix(in srgb, var(--paper) 82%, var(--bosc));
-      margin-bottom:1.1em;
-    }
-    .estructura-card p:last-child{ margin-bottom:0; }
-    .estructura-media{
-      border-radius:var(--r);
-      overflow:hidden;
-      aspect-ratio:4/3.4;
-    }
-    .estructura-media img{ width:100%; height:100%; object-fit:cover; filter:saturate(.88); }
-
-    /* ---------- about ---------- */
-    .about-grid{
-      display:grid; grid-template-columns:minmax(0,6fr) minmax(0,5fr);
-      gap:clamp(40px,6vw,110px); align-items:start;
-    }
-    .about-copy p{ margin-bottom:1.25em; }
-    .about-copy p:last-child{ margin-bottom:0; }
-    .fact{
-      display:grid; grid-template-columns:auto 1fr; gap:18px; align-items:start;
-      padding:22px 24px;
-      border-radius:20px;
-      transition:background-color .25s ease;
-    }
-    .fact:hover{ background:var(--stone); }
-    .fact + .fact{ margin-top:6px; }
-    .fact dt{
-      font:600 12px/1 var(--f-body); letter-spacing:.05em; text-transform:uppercase;
-      color:var(--bosc);
-      background:var(--sage);
-      border-radius:999px;
-      padding:8px 14px;
-      white-space:nowrap;
-    }
-    .fact dd{
-      font-size:15.5px; line-height:1.62;
-      color:color-mix(in srgb, var(--ink) 74%, var(--line));
-      padding-top:5px;
-    }
-
-    /* ---------- identidad: tiles de color ---------- */
-    #identity{ padding-top:0; }
-    .id-grid{
-      display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:16px;
-    }
-    .tile{
-      border-radius:var(--r);
-      padding:clamp(28px,3.2vw,44px);
-      min-height:clamp(240px,24vw,320px);
-      display:flex; flex-direction:column; justify-content:space-between; gap:24px;
-      transition:transform .3s cubic-bezier(.22,1,.36,1);
-    }
-    .tile:hover{ transform:translateY(-5px); }
-    .tile .tag{
-      font:600 12px/1 var(--f-body); letter-spacing:.06em; text-transform:uppercase;
-      display:inline-flex; align-self:flex-start;
-      border-radius:999px; padding:8px 14px;
-    }
-    .tile h3{ font-size:clamp(22px,2.3vw,32px); line-height:1.1; letter-spacing:-.025em; max-width:16ch; }
-    .tile p{ font-size:15.5px; line-height:1.6; max-width:44ch; }
-    .tile-bosc{ background:var(--bosc); color:var(--paper); }
-    .tile-bosc .tag{ background:color-mix(in srgb, var(--paper) 16%, transparent); color:var(--paper); }
-    .tile-bosc p{ color:color-mix(in srgb, var(--paper) 80%, var(--bosc)); }
-    .tile-lima{ background:var(--lima); color:var(--ink); }
-    .tile-lima .tag{ background:color-mix(in srgb, var(--ink) 10%, transparent); color:var(--ink); }
-    .tile-lima p{ color:color-mix(in srgb, var(--ink) 78%, var(--lima)); }
-    .tile-sage{ background:var(--sage); color:var(--ink); }
-    .tile-sage .tag{ background:color-mix(in srgb, var(--bosc) 12%, transparent); color:var(--bosc); }
-    .tile-sage p{ color:color-mix(in srgb, var(--ink) 74%, var(--sage)); }
-    .tile-ink{ background:var(--ink); color:var(--paper); }
-    .tile-ink .tag{ background:color-mix(in srgb, var(--paper) 14%, transparent); color:var(--paper); }
-    .tile-ink p{ color:color-mix(in srgb, var(--paper) 76%, var(--ink)); }
-
-    /* ---------- marquee ---------- */
-    .marquee{
-      overflow:hidden; white-space:nowrap;
-      padding-block:clamp(20px,2.4vw,30px);
-      background:var(--ink); color:var(--paper);
-    }
-    .marquee-track{
-      display:inline-flex; align-items:center;
-      animation:marquee 38s linear infinite;
-      will-change:transform;
-    }
-    .marquee-track span{
-      font:600 clamp(20px,2.2vw,30px)/1 var(--f-display);
-      letter-spacing:-.02em;
-      padding-inline:26px;
-    }
-    .marquee-track i{ font-style:normal; color:var(--lima); font-size:clamp(12px,1.2vw,16px); }
-    @keyframes marquee{ to{ transform:translateX(-50%); } }
-
-    /* ---------- tesis ---------- */
-    .th-grid{
-      display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:clamp(24px,3vw,44px);
-    }
-    .th-item{
-      border-top:2px solid var(--ink);
-      padding-top:24px;
-    }
-    .th-item .n{
-      display:inline-flex; align-items:center; justify-content:center;
-      width:40px; height:40px; border-radius:50%;
-      background:var(--lima);
-      font:600 15px/1 var(--f-display);
-      margin-bottom:20px;
-    }
-    .th-item h3{ font-size:clamp(20px,2vw,27px); letter-spacing:-.025em; margin-bottom:14px; }
-    .th-item p{
-      font-size:15.5px; line-height:1.65;
-      color:color-mix(in srgb, var(--ink) 72%, var(--line));
-    }
-
-    /* ---------- portfolio ---------- */
-    #portfolio{ background:var(--stone); border-radius:calc(var(--r) + 8px); margin-inline:clamp(8px,1vw,16px); }
-    .pf-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
-    .pf-card{
-      background:var(--paper);
-      border-radius:var(--r);
-      overflow:hidden;
-      display:flex; flex-direction:column;
-      transition:transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s ease;
-    }
-    .pf-card:hover{ transform:translateY(-6px); box-shadow:0 24px 48px rgba(23,29,21,.09); }
-    .pf-media{
-      aspect-ratio:16/9;
-      display:flex; align-items:center; justify-content:center;
-      position:relative;
-    }
-    .pf-media.zumba{ background:var(--bosc); }
-    .pf-media.mindvalley{ background:var(--ink); }
-    .pf-media img{ width:38%; height:auto; filter:grayscale(1) invert(1) brightness(1.08); opacity:.92; mix-blend-mode:screen; transition:transform .5s cubic-bezier(.22,1,.36,1); }
-    .pf-card:hover .pf-media img{ transform:scale(1.06); }
-    .pf-media .cat{
-      position:absolute; top:18px; left:18px;
-      font:600 11.5px/1 var(--f-body); letter-spacing:.05em; text-transform:uppercase;
-      background:color-mix(in srgb, var(--paper) 16%, transparent);
-      color:var(--paper);
-      backdrop-filter:blur(6px);
-      border-radius:999px; padding:9px 14px;
-    }
-    .pf-body{ padding:clamp(24px,2.6vw,36px); display:flex; flex-direction:column; gap:18px; flex:1; }
-    .pf-body h3{ font-size:clamp(26px,2.6vw,38px); letter-spacing:-.03em; }
-    .pf-body > p{
-      font-size:15.5px; line-height:1.66;
-      color:color-mix(in srgb, var(--ink) 72%, var(--line));
-    }
-    .pf-body > p strong{ font-weight:600; color:var(--ink); }
-    .pf-chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:auto; }
-    .chip{
-      font:500 13px/1.3 var(--f-body);
-      border:1.5px solid var(--line);
-      border-radius:999px;
-      padding:9px 14px;
-      color:color-mix(in srgb, var(--ink) 76%, var(--line));
-    }
-    .chip b{ font-weight:700; color:var(--bosc); margin-right:4px; }
-
-    /* ---------- fundador ---------- */
-    .founder-grid{
-      display:grid; grid-template-columns:minmax(0,4.6fr) minmax(0,6.4fr);
-      gap:clamp(32px,5vw,80px); align-items:center;
-    }
-    .founder-media{ position:relative; }
-    .founder-photo{
-      border-radius:var(--r);
-      overflow:hidden;
-      aspect-ratio:4/4.6;
-    }
-    .founder-photo img{ width:100%; height:100%; object-fit:cover; object-position:50% 24%; }
-    .founder-badge{
-      position:absolute; left:18px; bottom:18px; right:18px;
-      background:color-mix(in srgb, var(--paper) 88%, transparent);
-      backdrop-filter:blur(8px);
-      border-radius:18px;
-      padding:16px 20px;
-      display:flex; justify-content:space-between; align-items:center; gap:12px;
-    }
-    .founder-badge b{ font:600 15px/1.2 var(--f-display); }
-    .founder-badge span{ font:500 12px/1.2 var(--f-body); color:var(--bosc); text-transform:uppercase; letter-spacing:.05em; }
-    .founder-quote{
-      font:500 clamp(24px,2.8vw,40px)/1.25 var(--f-display);
-      letter-spacing:-.03em;
-      margin-bottom:30px;
-      max-width:24ch;
-    }
-    .founder-copy p{ margin-bottom:1.2em; }
-    .founder-copy p:last-child{ margin-bottom:0; }
-
-    /* ---------- contacto ---------- */
-    #contact{ padding-bottom:clamp(60px,7vw,100px); }
-    .contact-wrap{
-      background:var(--sage);
-      border-radius:calc(var(--r) + 8px);
-      padding:clamp(32px,4.5vw,72px);
-      display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr);
-      gap:clamp(36px,5vw,84px);
-      align-items:start;
-    }
-    .contact-points{ list-style:none; margin-top:28px; display:flex; flex-direction:column; gap:10px; }
-    .contact-points li{
-      font-size:15.5px; line-height:1.55;
-      color:color-mix(in srgb, var(--ink) 76%, var(--sage));
-      background:color-mix(in srgb, var(--paper) 66%, transparent);
-      border-radius:16px;
-      padding:14px 18px;
-      display:flex; gap:12px; align-items:baseline;
-    }
-    .contact-points li::before{
-      content:""; width:7px; height:7px; border-radius:50%;
-      background:var(--bosc); flex-shrink:0; transform:translateY(-2px);
-    }
-    .form-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-    .form-group{ display:flex; flex-direction:column; gap:8px; }
-    .form-group.full{ grid-column:1/-1; }
-    .form-group label{
-      font:600 12px/1 var(--f-body); letter-spacing:.05em; text-transform:uppercase;
-      color:var(--bosc);
-      padding-left:6px;
-    }
-    .form-group input,.form-group select,.form-group textarea{
-      border:1.5px solid transparent;
-      background:var(--paper);
-      border-radius:16px;
-      padding:15px 18px;
-      font-family:var(--f-body); font-size:15.5px; color:var(--ink);
-      transition:border-color .2s ease;
-      -webkit-appearance:none; appearance:none;
-    }
-    .form-group select{
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231D4A33' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
-      background-repeat:no-repeat; background-position:right 16px center;
-    }
-    .form-group input::placeholder,.form-group textarea::placeholder{ color:color-mix(in srgb, var(--ink) 36%, var(--paper)); }
-    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{ outline:none; border-color:var(--bosc); }
-    .form-group textarea{ min-height:120px; resize:vertical; line-height:1.55; }
-    .submit-btn{ margin-top:6px; }
-
-    /* ---------- footer ---------- */
-    footer{
-      background:var(--ink); color:color-mix(in srgb, var(--paper) 66%, var(--ink));
-      border-radius:calc(var(--r) + 8px) calc(var(--r) + 8px) 0 0;
-      margin-inline:clamp(8px,1vw,16px);
-      padding-top:clamp(56px,7vw,90px);
-      overflow:hidden;
-    }
-    .footer-grid{
-      display:flex; justify-content:space-between; align-items:flex-start;
-      gap:32px; flex-wrap:wrap;
-      padding-bottom:clamp(44px,5vw,72px);
-    }
-    .footer-brand img{ height:52px; width:auto; }
-    .footer-links{ list-style:none; display:flex; gap:clamp(16px,2.2vw,30px); flex-wrap:wrap; }
-    .footer-links a{
-      text-decoration:none; font:500 14px/1 var(--f-body);
-      color:color-mix(in srgb, var(--paper) 58%, var(--ink));
-      transition:color .2s ease;
-    }
-    .footer-links a:hover{ color:var(--lima); }
-    .footer-copy{
-      border-top:1px solid color-mix(in srgb, var(--paper) 12%, transparent);
-      padding-block:24px;
-      font:400 13px/1.6 var(--f-body);
-      color:color-mix(in srgb, var(--paper) 38%, var(--ink));
-      position:relative; z-index:2;
-    }
-    .ghost{
-      display:block;
-      font:700 clamp(60px,12vw,180px)/0.92 var(--f-display);
-      letter-spacing:-.04em;
-      color:color-mix(in srgb, var(--paper) 5%, transparent);
-      white-space:nowrap; text-align:center;
-      user-select:none; pointer-events:none;
-      margin-bottom:-0.2em;
-    }
-
-    /* ---------- responsive ---------- */
-    @media (max-width:980px){
-      .hero-stats{ grid-template-columns:1fr; }
-      .estructura-card{ grid-template-columns:1fr; }
-      .about-grid,.founder-grid,.contact-wrap{ grid-template-columns:1fr; }
-      .id-grid{ grid-template-columns:1fr; }
-      .th-grid{ grid-template-columns:1fr; gap:32px; }
-      .pf-grid{ grid-template-columns:1fr; }
-      .form-grid{ grid-template-columns:1fr; }
-      .wind{ display:none; }
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
 
   <nav aria-label="Principal">
     <div class="nav-inner">
-      <a href="#hero" class="brand"><img src="assets/logo-ink.png" alt="Ground Wind Holding" /></a>
+      <a href="#hero" class="brand"><img src="/assets/logo-ink.png" alt="Ground Wind" /></a>
       <ul class="nav-links">
-        <li><a href="#about">Holding</a></li>
-        <li><a href="#identity">Visión</a></li>
+        <li><a href="#about">Sociedad</a></li>
+        <li><a href="#identity">Identidad</a></li>
         <li><a href="#thesis">Inversión</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#founder">Fundador</a></li>
         <li class="nav-cta-li"><a href="#contact" class="btn btn-lima">Contacto</a></li>
+        <li class="nav-lang-li">
+          <div class="lang">
+            <a href="/" aria-current="true" hreflang="es">ES</a>
+            <a href="/en/" hreflang="en">EN</a>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
@@ -519,19 +49,13 @@
       <path d="M-40 330 C 170 280, 400 390, 590 330 S 850 280, 910 324" />
     </svg>
     <div class="container hero-inner">
-      <p class="kicker reveal">Sociedad holding de inversión · Palma de Mallorca</p>
-      <h1 class="hero-title reveal" data-d="1">Invertimos en las empresas que definirán el futuro del <span class="hl">bienestar humano</span></h1>
-      <p class="lede hero-sub reveal" data-d="2">
-        Ground Wind Holding es una sociedad holding de inversión con base en Palma de Mallorca, creada para identificar, financiar y acompañar estratégicamente a compañías del ámbito del fitness, el bienestar, la salud y el desarrollo humano con capacidad real de crecimiento sostenido y relevancia de mercado.
+      <h1 class="hero-title reveal">Invertimos en las empresas que definirán el futuro del <span class="hl">bienestar humano</span></h1>
+      <p class="lede hero-sub reveal" data-d="1">
+        Ground Wind es una sociedad de inversión con base en Palma de Mallorca, creada para identificar, financiar y acompañar estratégicamente a empresas del ámbito del fitness, el bienestar, la salud y el desarrollo humano con capacidad real de crecimiento y relevancia de mercado.
       </p>
-      <div class="hero-actions reveal" data-d="3">
+      <div class="hero-actions reveal" data-d="2">
         <a href="#contact" class="btn btn-primary">Presenta tu proyecto <span class="arr">→</span></a>
-        <a href="#about" class="btn btn-ghost">Conoce el holding <span class="arr">↓</span></a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat reveal"><strong>186</strong><span>países de presencia histórica de Zumba</span></div>
-        <div class="stat reveal" data-d="1"><strong>15M</strong><span>participantes semanales en clases de Zumba</span></div>
-        <div class="stat reveal" data-d="2"><strong>195<i>+</i></strong><span>países alcanzados por Mindvalley</span></div>
+        <a href="#about" class="btn btn-ghost">Conoce la sociedad <span class="arr">↓</span></a>
       </div>
     </div>
   </header>
@@ -545,12 +69,12 @@
           <path d="M-20 200 C 90 165, 220 230, 330 196 S 465 160, 485 192" />
         </svg>
         <div>
-          <h2>Una estructura creada para invertir con criterio y <span class="hl">permanencia</span></h2>
-          <p>Ground Wind Holding no nace como una iniciativa personal aislada, sino como una plataforma societaria diseñada para construir un portfolio sólido en sectores con crecimiento estructural.</p>
-          <p>Su propuesta combina visión estratégica, sensibilidad de marca, conocimiento profundo del mercado wellness y una aproximación de largo plazo propia de un holding de inversión especializado.</p>
+          <h2>Una estructura creada para invertir con criterio y <span class="hl">visión de largo plazo</span></h2>
+          <p>Ground Wind no nace como una iniciativa personal aislada, sino como una sociedad diseñada para construir una cartera sólida de participaciones en sectores con crecimiento estructural.</p>
+          <p>Su propuesta combina visión estratégica, sensibilidad de marca, conocimiento profundo del mercado del bienestar y una forma de invertir orientada al largo plazo.</p>
         </div>
         <div class="estructura-media">
-          <img src="assets/interior-calm.jpg" alt="Interior contemporáneo sereno" loading="lazy" />
+          <img src="/assets/interior-calm.jpg" alt="Interior contemporáneo sereno" loading="lazy" />
         </div>
       </div>
     </div>
@@ -561,21 +85,21 @@
       <div class="about-grid">
         <div>
           <p class="kicker reveal">Quiénes somos</p>
-          <h2 class="sec-title reveal" data-d="1">Una plataforma patrimonial y estratégica para invertir en crecimiento con sentido</h2>
+          <h2 class="sec-title reveal" data-d="1">Una sociedad de inversión pensada para construir valor duradero</h2>
           <div class="lede about-copy reveal" data-d="2">
-            <p><strong>Ground Wind Holding</strong> es una sociedad holding de inversión constituida en España para adquirir, desarrollar y gestionar participaciones en empresas del universo fitness, wellness, salud, educación transformacional y hábitos de vida saludable.</p>
-            <p>La compañía se articula como una estructura de inversión profesional, deliberadamente selectiva y con vocación de permanencia, orientada a la construcción de valor a largo plazo.</p>
+            <p><strong>Ground Wind</strong> es una sociedad española especializada en invertir en empresas del universo fitness, wellness, salud, educación transformacional y hábitos de vida saludable.</p>
+            <p>La compañía se estructura como una plataforma de inversión profesional, altamente selectiva y con vocación de permanencia, orientada a construir valor a largo plazo a través de una cartera de participaciones de calidad.</p>
             <p>Su base operativa en Palma de Mallorca aporta una ubicación estable, internacional y coherente con una identidad empresarial contemporánea y europea.</p>
           </div>
         </div>
         <dl class="reveal" data-d="2">
           <div class="fact">
             <dt>Naturaleza</dt>
-            <dd>Holding de inversión pura, con foco definido en sectores vinculados al bienestar humano.</dd>
+            <dd>Sociedad de inversión centrada en empresas vinculadas al bienestar humano.</dd>
           </div>
           <div class="fact">
-            <dt>Base</dt>
-            <dd>Palma de Mallorca como centro operativo, administrativo y de coordinación corporativa.</dd>
+            <dt>Base operativa</dt>
+            <dd>Palma de Mallorca como centro de coordinación operativa, administrativa y corporativa.</dd>
           </div>
           <div class="fact">
             <dt>Modelo</dt>
@@ -583,7 +107,7 @@
           </div>
           <div class="fact">
             <dt>Gobernanza</dt>
-            <dd>Dirección liderada por Jeffrey Perlman con soporte operativo corporativo y asesoramiento legal externo.</dd>
+            <dd>Dirección liderada por Jeffrey Perlman, con soporte operativo corporativo y asesoramiento legal externo.</dd>
           </div>
         </dl>
       </div>
@@ -593,9 +117,9 @@
   <section id="identity">
     <div class="container">
       <p class="kicker reveal">Identidad corporativa</p>
-      <h2 class="sec-title reveal" data-d="1">Una tesis clara para un mercado estructuralmente relevante</h2>
+      <h2 class="sec-title reveal" data-d="1">Una tesis clara para un mercado con relevancia estructural</h2>
       <p class="lede sec-sub reveal" data-d="2">
-        Ground Wind Holding parte de una convicción sencilla: las empresas que mejoran de forma tangible la vida de las personas son también las que tienen mayor capacidad de construir marcas sólidas y valor duradero.
+        Ground Wind parte de una convicción sencilla: las empresas que mejoran de forma tangible la vida de las personas son también las que tienen mayor capacidad de construir marcas sólidas y valor duradero.
       </p>
       <div class="id-grid">
         <div class="tile tile-bosc reveal">
@@ -603,28 +127,28 @@
           <div>
             <h3>Asignar capital con propósito y disciplina</h3>
           </div>
-          <p>Invertir en compañías que contribuyen de forma real al bienestar, la salud y el desarrollo humano.</p>
+          <p>Invertir en empresas que contribuyen de forma real al bienestar, la salud y el desarrollo humano.</p>
         </div>
         <div class="tile tile-lima reveal" data-d="1">
           <span class="tag">Visión</span>
           <div>
-            <h3>Consolidar un holding de referencia en Europa</h3>
+            <h3>Construir una firma de inversión de referencia en la economía del bienestar en Europa</h3>
           </div>
-          <p>Construir una plataforma reconocida por su criterio inversor, su reputación y su calidad de portfolio.</p>
+          <p>Desarrollar una plataforma reconocida por la calidad de su criterio inversor, su reputación y la solidez de su cartera de participaciones.</p>
         </div>
         <div class="tile tile-sage reveal" data-d="1">
           <span class="tag">Valores</span>
           <div>
-            <h3>Integridad, exigencia, largo plazo</h3>
+            <h3>Integridad, exigencia y largo plazo</h3>
           </div>
-          <p>Seleccionar con rigor, operar con coherencia y acompañar cada inversión con vocación de permanencia.</p>
+          <p>Seleccionar con rigor, operar con coherencia y acompañar cada inversión con una visión sostenida en el tiempo.</p>
         </div>
         <div class="tile tile-ink reveal" data-d="2">
           <span class="tag">Objetivo</span>
           <div>
-            <h3>Construir activos empresariales relevantes</h3>
+            <h3>Construir una cartera de activos empresariales relevantes</h3>
           </div>
-          <p>Desarrollar una cartera de participaciones de alta calidad en categorías con crecimiento estructural y sentido económico.</p>
+          <p>Desarrollar participaciones de alta calidad en categorías con crecimiento estructural y relevancia económica de largo recorrido.</p>
         </div>
       </div>
     </div>
@@ -642,7 +166,7 @@
       <p class="kicker reveal">Tesis de inversión</p>
       <h2 class="sec-title reveal" data-d="1">Un enfoque selectivo en sectores con crecimiento estructural</h2>
       <p class="lede sec-sub reveal" data-d="2">
-        Ground Wind Holding prioriza compañías donde la calidad del equipo, la claridad de la propuesta de valor y la capacidad de escalabilidad estén alineadas con una contribución positiva al bienestar humano.
+        Ground Wind prioriza compañías en las que la calidad del equipo, la claridad de la propuesta de valor y la capacidad de escalabilidad estén alineadas con una contribución positiva al bienestar humano.
       </p>
       <div class="th-grid">
         <div class="th-item reveal">
@@ -653,12 +177,12 @@
         <div class="th-item reveal" data-d="1">
           <span class="n">2</span>
           <h3>Criterios de selección</h3>
-          <p>Equipos sólidos, capacidad de ejecución, mercado relevante, escalabilidad y una propuesta de valor defendible a largo plazo.</p>
+          <p>Equipos sólidos, capacidad de ejecución, mercados relevantes, escalabilidad y una propuesta de valor defendible a largo plazo.</p>
         </div>
         <div class="th-item reveal" data-d="2">
           <span class="n">3</span>
           <h3>Aportación de valor</h3>
-          <p>Además de capital, el holding aporta sensibilidad de marca, criterio estratégico, visión internacional y experiencia real de construcción de compañías de alcance global.</p>
+          <p>Además de capital, Ground Wind aporta sensibilidad de marca, criterio estratégico, visión internacional y experiencia real en la construcción de compañías con relevancia global.</p>
         </div>
       </div>
     </div>
@@ -667,39 +191,55 @@
   <section id="portfolio">
     <div class="container">
       <p class="kicker reveal">Portfolio fundacional</p>
-      <h2 class="sec-title reveal" data-d="1">Trayectorias empresariales que respaldan la credibilidad del holding</h2>
+      <h2 class="sec-title reveal" data-d="1">Trayectorias empresariales que respaldan la credibilidad de la sociedad</h2>
       <p class="lede sec-sub reveal" data-d="2">
-        Ground Wind Holding se apoya en experiencias empresariales de alto impacto en los sectores del fitness y el desarrollo personal, que constituyen la base reputacional de su posicionamiento.
+        Ground Wind se apoya en experiencias empresariales de alto impacto en los sectores del fitness y el desarrollo personal, que constituyen la base reputacional de su posicionamiento como sociedad de inversión especializada.
       </p>
       <div class="pf-grid">
         <article class="pf-card reveal">
           <div class="pf-media zumba">
             <span class="cat">Fitness &amp; movement</span>
-            <img src="assets/zumba-logo.png" alt="Zumba" loading="lazy" />
+            <img src="/assets/zumba-logo.png" alt="Zumba" loading="lazy" />
           </div>
           <div class="pf-body">
-            <h3>Zumba</h3>
-            <p>Zumba se consolidó como una de las historias de crecimiento más relevantes del fitness global, alcanzando aproximadamente <strong>15 millones de participantes semanales</strong> en clases y presencia en <strong>186 países</strong>. Durante su expansión internacional, llegó a ser reconocido como el mayor programa de fitness con marca del mundo.</p>
-            <div class="pf-chips">
-              <span class="chip"><b>15M</b>participantes semanales</span>
-              <span class="chip"><b>186</b>países</span>
-              <span class="chip"><b>Global</b>referencia histórica en branded fitness</span>
+            <div class="pf-head">
+              <h3>Zumba</h3>
+              <div class="pf-growth"><b>100×</b><span>Crecimiento</span></div>
             </div>
+            <p>Zumba se consolidó como una de las historias de crecimiento más relevantes del fitness global, alcanzando aproximadamente <strong>15 millones de participantes semanales</strong> en clases y presencia en <strong>186 países</strong>. Durante su expansión internacional, llegó a ser reconocido como el mayor programa de fitness con marca del mundo.</p>
+            <dl class="pf-stats">
+              <div>
+                <dt>$550M</dt>
+                <dd>Valoración</dd>
+              </div>
+              <div>
+                <dt>15M</dt>
+                <dd>Participantes semanales en clases</dd>
+              </div>
+              <div>
+                <dt>186</dt>
+                <dd>Países</dd>
+              </div>
+            </dl>
           </div>
         </article>
         <article class="pf-card reveal" data-d="1">
           <div class="pf-media mindvalley">
             <span class="cat">Education &amp; personal growth</span>
-            <img src="assets/mindvalley-logo.png" alt="Mindvalley" loading="lazy" />
+            <img src="/assets/mindvalley-logo.png" alt="Mindvalley" loading="lazy" />
           </div>
           <div class="pf-body">
-            <h3>Mindvalley</h3>
-            <p>Mindvalley se ha consolidado como una de las plataformas más reconocidas del mundo en educación transformacional y crecimiento personal, con alcance internacional, una propuesta diferencial en aprendizaje y una marca de alta influencia dentro del ecosistema del bienestar mental y humano.</p>
-            <div class="pf-chips">
-              <span class="chip"><b>195+</b>países alcanzados</span>
-              <span class="chip"><b>Scale</b>crecimiento global sostenido</span>
-              <span class="chip"><b>Brand</b>referencia en personal growth</span>
+            <div class="pf-head">
+              <h3>Mindvalley</h3>
+              <div class="pf-growth"><b>10×</b><span>Crecimiento</span></div>
             </div>
+            <p>Mindvalley se ha consolidado como una de las plataformas más reconocidas del mundo en educación transformacional y crecimiento personal, con alcance internacional, una propuesta diferencial en aprendizaje y una fuerte influencia dentro del ecosistema del bienestar mental y humano.</p>
+            <dl class="pf-stats">
+              <div>
+                <dt>$150M</dt>
+                <dd>Facturación anual</dd>
+              </div>
+            </dl>
           </div>
         </article>
       </div>
@@ -712,7 +252,7 @@
       <div class="founder-grid">
         <div class="founder-media reveal">
           <div class="founder-photo">
-            <img src="assets/jeffrey.webp" alt="Jeffrey Perlman" loading="lazy" />
+            <img src="/assets/jeffrey.webp" alt="Jeffrey Perlman" loading="lazy" />
           </div>
           <div class="founder-badge">
             <b>Jeffrey Perlman</b>
@@ -720,11 +260,11 @@
           </div>
         </div>
         <div>
-          <blockquote class="founder-quote reveal" data-d="1">"Las marcas más valiosas no solo venden un producto; <span class="hl">cambian comportamientos</span>, crean comunidad y elevan la vida de las personas."</blockquote>
+          <blockquote class="founder-quote reveal" data-d="1">Las marcas más valiosas no solo venden un producto; <span class="hl">cambian comportamientos</span>, crean comunidad y elevan la vida de las personas.</blockquote>
           <div class="lede founder-copy reveal" data-d="2">
-            <p>Ground Wind Holding está fundada por <strong>Jeffrey Perlman</strong>, estratega de marca y operador con una trayectoria internacional singular en el ecosistema del bienestar.</p>
-            <p>Su experiencia pública incluye su etapa como <strong>former CMO de Zumba</strong> y su rol como <strong>Chief Strategy Officer de Mindvalley</strong>, dos experiencias que refuerzan una combinación poco frecuente de visión de marca, sensibilidad de producto y capacidad de expansión internacional.</p>
-            <p>Esa experiencia constituye uno de los principales activos diferenciales del holding: una comprensión práctica de cómo nacen, crecen y se posicionan compañías capaces de construir relevancia global.</p>
+            <p>Ground Wind está fundada por <strong>Jeffrey Perlman</strong>, estratega de marca y operador con una trayectoria internacional singular en el ecosistema del bienestar.</p>
+            <p>Su experiencia pública incluye su etapa como <strong>former CMO de Zumba</strong> y su rol como <strong>Chief Strategy Officer de Mindvalley</strong>, dos experiencias que reflejan una combinación poco frecuente de visión de marca, sensibilidad de producto y capacidad de expansión internacional.</p>
+            <p>Esa experiencia constituye uno de los principales activos diferenciales de la sociedad: una comprensión práctica de cómo nacen, crecen y se posicionan compañías capaces de construir relevancia global.</p>
           </div>
         </div>
       </div>
@@ -736,7 +276,7 @@
       <p class="kicker reveal">Contacto</p>
       <h2 class="sec-title reveal" data-d="1">Empresas con visión, disciplina y capacidad de impacto</h2>
       <p class="lede sec-sub reveal" data-d="2">
-        Si tu compañía opera en el ámbito del bienestar, la salud, el fitness o la educación transformacional, Ground Wind Holding está abierta a conocer proyectos con ambición real, fundamentos sólidos y vocación de crecimiento sostenible.
+        Si tu empresa opera en el ámbito del bienestar, la salud, el fitness o la educación transformacional, Ground Wind está abierta a conocer proyectos con ambición real, fundamentos sólidos y vocación de crecimiento sostenible.
       </p>
       <div class="contact-wrap reveal">
         <div>
@@ -744,27 +284,29 @@
           <ul class="contact-points">
             <li>Base operativa en Mallorca.</li>
             <li>Foco principal en España, con apertura a oportunidades internacionales.</li>
-            <li>Holding de inversión pura.</li>
+            <li>Sociedad de inversión especializada.</li>
             <li>Canal de contacto institucional a través de la web corporativa.</li>
           </ul>
         </div>
-        <form id="contact-form">
+        <form id="contact-form" name="groundwind-es" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-msg="Formulario de ejemplo enviado. Al desplegar en Netlify, las respuestas llegarán a Netlify Forms.">
+          <input type="hidden" name="form-name" value="groundwind-es" />
+          <p class="hp"><label>No rellenar: <input name="bot-field" /></label></p>
           <div class="form-grid">
             <div class="form-group">
-              <label for="f-nombre">Nombre</label>
-              <input id="f-nombre" type="text" placeholder="Tu nombre completo" required />
+              <label for="f-nombre">Nombre completo</label>
+              <input id="f-nombre" name="nombre" type="text" placeholder="Tu nombre completo" required />
             </div>
             <div class="form-group">
               <label for="f-empresa">Empresa</label>
-              <input id="f-empresa" type="text" placeholder="Nombre de la empresa" required />
+              <input id="f-empresa" name="empresa" type="text" placeholder="Nombre de la empresa" required />
             </div>
             <div class="form-group">
               <label for="f-email">Email</label>
-              <input id="f-email" type="email" placeholder="tu@email.com" required />
+              <input id="f-email" name="email" type="email" placeholder="tu@email.com" required />
             </div>
             <div class="form-group">
               <label for="f-sector">Sector</label>
-              <select id="f-sector">
+              <select id="f-sector" name="sector">
                 <option>Selecciona…</option>
                 <option>Fitness y deporte</option>
                 <option>Wellness</option>
@@ -776,7 +318,7 @@
             </div>
             <div class="form-group full">
               <label for="f-proyecto">Proyecto</label>
-              <textarea id="f-proyecto" placeholder="Cuéntanos brevemente qué hacéis, a quién servís y por qué vuestra compañía encaja con Ground Wind Holding."></textarea>
+              <textarea id="f-proyecto" name="proyecto" placeholder="Cuéntanos brevemente qué hacéis, a quién servís y por qué vuestra empresa encaja con Ground Wind."></textarea>
             </div>
             <div class="form-group full">
               <button type="submit" class="btn btn-primary submit-btn">Enviar propuesta <span class="arr">→</span></button>
@@ -790,14 +332,15 @@
   <footer>
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand"><img src="assets/logo-calc.png" alt="Ground Wind Holding" /></div>
+        <div class="footer-brand"><img src="/assets/logo-calc.png" alt="Ground Wind" /></div>
         <ul class="footer-links">
-          <li><a href="#about">Holding</a></li>
-          <li><a href="#identity">Visión</a></li>
+          <li><a href="#about">Sociedad</a></li>
+          <li><a href="#identity">Identidad</a></li>
           <li><a href="#thesis">Inversión</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#founder">Fundador</a></li>
           <li><a href="#contact">Contacto</a></li>
+          <li><a href="/en/" hreflang="en">English</a></li>
         </ul>
       </div>
     </div>
@@ -807,47 +350,6 @@
     </div>
   </footer>
 
-  <script>
-    (function(){
-      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      var els = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window) || reduce){
-        els.forEach(function(el){ el.classList.add('in'); });
-      } else {
-        var io = new IntersectionObserver(function(entries){
-          entries.forEach(function(e){
-            if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-          });
-        }, { rootMargin:'0px 0px -6% 0px', threshold:0.05 });
-        els.forEach(function(el){ io.observe(el); });
-        setTimeout(function(){ els.forEach(function(el){ el.classList.add('in'); }); }, 2500);
-      }
-
-      // nav: sección activa
-      var navLinks = document.querySelectorAll('.nav-links a[href^="#"]:not(.btn)');
-      var map = {};
-      navLinks.forEach(function(a){ map[a.getAttribute('href').slice(1)] = a; });
-      var secIO = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          var link = map[e.target.id];
-          if (!link) return;
-          if (e.isIntersecting){
-            navLinks.forEach(function(a){ a.classList.remove('active'); });
-            link.classList.add('active');
-          }
-        });
-      }, { rootMargin:'-40% 0px -55% 0px' });
-      Object.keys(map).forEach(function(id){
-        var s = document.getElementById(id);
-        if (s) secIO.observe(s);
-      });
-
-      document.getElementById('contact-form').addEventListener('submit', function(e){
-        e.preventDefault();
-        alert('Formulario de ejemplo enviado. El siguiente paso sería conectarlo a email o CRM.');
-      });
-    })();
-  </script>
+  <script src="/assets/app.js"></script>
 </body>
 </html>
