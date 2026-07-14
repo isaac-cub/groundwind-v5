@@ -147,7 +147,7 @@ nav{
 .hero-inner{ position:relative; z-index:1; }
 .hero-title{
   font-size:clamp(44px,7vw,104px);
-  line-height:1.0;
+  line-height:1.1;
   letter-spacing:-.04em;
   max-width:15ch;
   margin-bottom:32px;
@@ -181,7 +181,7 @@ section{ padding-block:clamp(84px,10vw,140px); }
 }
 .estructura-card .wind2 path{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; }
 .estructura-card h2{
-  font-size:clamp(30px,4.2vw,60px); line-height:1.05;
+  font-size:clamp(30px,4.2vw,60px); line-height:1.12;
   max-width:20ch;
   margin-bottom:clamp(32px,3.5vw,52px);
   position:relative; z-index:1;
