@@ -99,7 +99,7 @@ nav{
   max-width:var(--max-w); margin-inline:auto; padding-inline:var(--pad-x);
   height:80px; display:flex; align-items:center; justify-content:space-between; gap:24px;
 }
-.brand img{ height:46px; width:auto; }
+.brand img{ height:40px; width:auto; }
 .nav-links{ list-style:none; display:flex; align-items:center; gap:clamp(18px,2.2vw,34px); }
 .nav-links a:not(.btn):not(.lang a){
   text-decoration:none; font:500 14px/1 var(--f-body);
@@ -482,7 +482,7 @@ footer{
   gap:32px; flex-wrap:wrap;
   padding-bottom:clamp(44px,5vw,72px);
 }
-.footer-brand img{ height:52px; width:auto; }
+.footer-brand img{ height:48px; width:auto; }
 .footer-links{ list-style:none; display:flex; gap:clamp(16px,2.2vw,30px); flex-wrap:wrap; }
 .footer-links a{
   text-decoration:none; font:500 14px/1 var(--f-body);
