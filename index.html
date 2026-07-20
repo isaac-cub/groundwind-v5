@@ -292,7 +292,7 @@
             <li>Canal de contacto institucional a través de la web corporativa.</li>
           </ul>
         </div>
-        <form id="contact-form" name="groundwind-es" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-msg="Formulario de ejemplo enviado. Al desplegar en Netlify, las respuestas llegarán a Netlify Forms.">
+        <form id="contact-form" name="groundwind-es" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" data-sending="Enviando…" data-success-title="Propuesta recibida" data-success="Gracias por tu interés. Hemos recibido tu propuesta y el equipo de Ground Wind se pondrá en contacto contigo si encaja con nuestra tesis de inversión." data-error="No hemos podido enviar el formulario. Vuelve a intentarlo o escríbenos a info@groundwind.eu.">
           <input type="hidden" name="form-name" value="groundwind-es" />
           <p class="hp"><label>No rellenar: <input name="bot-field" /></label></p>
           <div class="form-grid">
@@ -344,6 +344,9 @@
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#founder">Fundador</a></li>
           <li><a href="#contact">Contacto</a></li>
+          <li><a href="/legal/#aviso-legal">Aviso legal</a></li>
+          <li><a href="/legal/#privacidad">Privacidad</a></li>
+          <li><a href="/legal/#cookies">Cookies</a></li>
           <li><a href="/en/" hreflang="en">English</a></li>
         </ul>
       </div>
@@ -355,5 +358,6 @@
   </footer>
 
   <script src="/assets/app.js"></script>
+  <script src="/assets/cookies.js" defer></script>
 </body>
 </html>
