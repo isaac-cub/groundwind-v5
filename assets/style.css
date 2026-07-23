@@ -89,7 +89,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 }
 
 /* ---------- nav ---------- */
-nav{
+body > nav{
   position:fixed; top:0; left:0; right:0; z-index:1000;
   background:color-mix(in srgb, var(--paper) 86%, transparent);
   backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
@@ -203,6 +203,24 @@ section{ padding-block:clamp(84px,10vw,140px); }
 .estructura-card p{
   font-size:clamp(15.5px,1.2vw,18px); line-height:1.68;
   color:color-mix(in srgb, var(--paper) 82%, var(--bosc));
+}
+
+/* ---------- cifras destacadas ---------- */
+#figures{ padding-top:clamp(56px,6vw,92px); padding-bottom:clamp(56px,6vw,92px); }
+.figures-grid{
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(20px,3vw,48px); margin-top:6px;
+}
+.figure{ border-top:2px solid var(--ink); padding-top:22px; }
+.figure dt{
+  font:600 clamp(46px,6.4vw,96px)/0.92 var(--f-display);
+  letter-spacing:-.05em; color:var(--ink);
+}
+.figure dd{
+  margin-top:14px;
+  font-size:clamp(14px,1.05vw,16px); line-height:1.5;
+  color:color-mix(in srgb, var(--ink) 66%, var(--line));
+  max-width:22ch;
 }
 
 /* ---------- about ---------- */
@@ -358,35 +376,19 @@ section{ padding-block:clamp(84px,10vw,140px); }
   border-radius:10px; object-fit:contain; flex-shrink:0;
 }
 .pf-body h3{ font-size:clamp(26px,2.6vw,38px); letter-spacing:-.03em; }
-.pf-growth{
-  display:inline-flex; align-items:baseline; gap:9px;
-  background:var(--lima);
-  border-radius:999px;
-  padding:9px 18px 10px;
-}
-.pf-growth b{ font:600 clamp(20px,1.9vw,26px)/1 var(--f-display); letter-spacing:-.03em; color:var(--ink); }
-.pf-growth span{ font:600 11.5px/1 var(--f-body); letter-spacing:.06em; text-transform:uppercase; color:color-mix(in srgb, var(--ink) 78%, var(--lima)); }
 .pf-body > p{
   font-size:15.5px; line-height:1.66;
   color:color-mix(in srgb, var(--ink) 72%, var(--line));
 }
 .pf-body > p strong{ font-weight:600; color:var(--ink); }
-.pf-stats{
-  display:flex; flex-wrap:wrap; gap:22px 34px;
-  margin-top:auto; padding-top:26px;
+.pf-meta{
+  margin-top:auto; padding-top:24px;
   border-top:1.5px solid var(--line);
+  font-size:14.5px; line-height:1.8;
+  color:color-mix(in srgb, var(--ink) 64%, var(--line));
 }
-.pf-stats > div{ min-width:112px; }
-.pf-stats dt{
-  font:600 clamp(32px,3.4vw,48px)/1 var(--f-display);
-  letter-spacing:-.045em; color:var(--ink);
-}
-.pf-stats dd{
-  margin-top:8px;
-  font:500 13px/1.45 var(--f-body);
-  color:color-mix(in srgb, var(--ink) 60%, var(--line));
-  max-width:17ch;
-}
+.pf-meta b{ font-weight:600; color:var(--ink); }
+.pf-meta i{ font-style:normal; color:var(--line); margin-inline:7px; }
 
 /* ---------- fundador ---------- */
 .founder-grid{
@@ -618,13 +620,25 @@ footer{
   transition:color .2s ease;
 }
 .footer-links a:hover{ color:var(--lima); }
-.footer-copy{
+.footer-bottom{
   border-top:1px solid color-mix(in srgb, var(--paper) 12%, transparent);
   padding-block:24px;
-  font:400 13px/1.6 var(--f-body);
-  color:color-mix(in srgb, var(--paper) 38%, var(--ink));
+  display:flex; justify-content:space-between; align-items:center;
+  gap:14px 28px; flex-wrap:wrap;
   position:relative; z-index:2;
 }
+.footer-copy{
+  margin:0;
+  font:400 13px/1.6 var(--f-body);
+  color:color-mix(in srgb, var(--paper) 38%, var(--ink));
+}
+.footer-legal{ list-style:none; display:flex; gap:clamp(14px,2vw,26px); flex-wrap:wrap; }
+.footer-legal a{
+  text-decoration:none; font:500 13px/1 var(--f-body);
+  color:color-mix(in srgb, var(--paper) 50%, var(--ink));
+  transition:color .2s ease;
+}
+.footer-legal a:hover{ color:var(--lima); }
 .ghost{
   display:block;
   font:700 clamp(60px,12vw,180px)/0.92 var(--f-display);
@@ -644,6 +658,10 @@ footer{
   .pf-grid{ grid-template-columns:1fr; }
   .form-grid{ grid-template-columns:1fr; }
   .wind{ display:none; }
+}
+@media (max-width:680px){
+  .figures-grid{ grid-template-columns:1fr; gap:28px; }
+  .figure dd{ max-width:none; }
 }
 @media (max-width:560px){
   .fact{ grid-template-columns:1fr; gap:12px; padding-block:20px; }
